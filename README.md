@@ -14,6 +14,12 @@
 ## Installation
 
 ```bash
+$ docker-compose up -d
+$ docker ps
+
+# docker exec -it your-mysql-container-name mysql -u root -p
+$ docker exec -it github-chanonhongthong-nestsample mysql -u root -p
+
 $ yarn install
 ```
 
