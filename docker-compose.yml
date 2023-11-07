@@ -1,3 +1,5 @@
+# ref: https://baumannalexj.medium.com/connect-your-db-tool-to-a-dockerized-mysql-server-container-bc18853524ed
+
 version: '3.3'
 services:
   db:
