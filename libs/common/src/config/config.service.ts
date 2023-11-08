@@ -1,4 +1,5 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
+import { join } from 'path';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require('dotenv').config();
@@ -38,8 +39,8 @@ class ConfigService {
       password: this.getValue('MYSQL_PASSWORD'),
       database: this.getValue('MYSQL_DB'),
 
-      entities: ['**/*.entity{.ts,.js}'],
-      synchronize: false,
+      entities: [join(__dirname, '/**/*.entity{.ts,.js}')],
+      synchronize: true,
       // ssl: this.isProduction(),
     };
   }
