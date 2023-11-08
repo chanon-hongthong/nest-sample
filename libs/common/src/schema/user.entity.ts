@@ -44,18 +44,18 @@ export class User extends BaseEntity {
   })
   last_name: string;
 
-  @Column({
-    type: 'datetime',
-    nullable: true,
-    default: 'CURRENT_TIMESTAMP',
-  })
-  date_create: string;
+  // @Column({
+  //   type: 'datetime',
+  //   nullable: true,
+  //   default: 'CURRENT_TIMESTAMP',
+  // })
+  // date_create: string;
 
-  @Column({
-    type: 'datetime',
-    nullable: true,
-    default: '',
-    onUpdate: 'CURRENT_TIMESTAMP',
-  })
-  date_update: string;
+  // @Column({
+  //   type: 'datetime',
+  //   nullable: true,
+  //   default: '',
+  //   onUpdate: 'CURRENT_TIMESTAMP',
+  // })
+  // date_update: string;
 }

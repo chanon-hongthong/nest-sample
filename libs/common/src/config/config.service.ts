@@ -39,7 +39,9 @@ class ConfigService {
       password: this.getValue('MYSQL_PASSWORD'),
       database: this.getValue('MYSQL_DB'),
 
+      autoLoadEntities: true,
       entities: [join(__dirname, '/**/*.entity{.ts,.js}')],
+
       synchronize: true,
       // ssl: this.isProduction(),
     };
