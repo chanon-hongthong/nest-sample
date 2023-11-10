@@ -33,3 +33,12 @@ lerna-debug.log*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# Database Volume
+/database
+
+# Docker File
+docker-compose.yml
+
+# Env
+.env
