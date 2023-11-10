@@ -38,7 +38,7 @@ class ConfigService {
   // }
 
   public isProduction() {
-    const mode = this.getValue('MODE', false);
+    const mode = this.getValue('APP_MODE', false);
     return mode != 'DEV';
   }
 
