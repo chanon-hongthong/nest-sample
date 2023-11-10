@@ -8,7 +8,7 @@ export class UserController {
   constructor(private readonly userService: UserService) {}
 
   @Get('all')
-  getAll() {
-    return this.userService.findAll();
+  async getAll(): Promise<string> {
+    return JSON.stringify(await this.userService.findAll());
   }
 }
