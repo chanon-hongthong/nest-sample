@@ -39,6 +39,7 @@ lerna-debug.log*
 
 # Docker File
 docker-compose.yml
+Dockerfile
 
 # Env
 .env
