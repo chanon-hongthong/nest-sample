@@ -13,7 +13,7 @@ async function bootstrap() {
   if (!configService.isProduction()) {
     const config = new DocumentBuilder()
       .setTitle(configService.getAppName())
-      .setDescription('API application with NestJS get user on mysql database')
+      .setDescription(configService.getAppDescription())
       .setVersion(configService.getAppVersion())
       .build();
 

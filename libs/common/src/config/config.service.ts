@@ -25,6 +25,10 @@ class ConfigService {
     return this.getValue('APP_NAME', true);
   }
 
+  public getAppDescription() {
+    return this.getValue('APP_DESCRIPTION', true);
+  }
+
   public getAppVersion() {
     return this.getValue('APP_VERSION', true);
   }
