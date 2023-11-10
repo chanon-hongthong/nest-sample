@@ -21,9 +21,21 @@ class ConfigService {
     return this;
   }
 
-  public getPort() {
-    return this.getValue('PORT', true);
+  public getAppName() {
+    return this.getValue('APP_NAME', true);
   }
+
+  public getAppVersion() {
+    return this.getValue('APP_VERSION', true);
+  }
+
+  public getAppListenPort() {
+    return this.getValue('APP_LISTEN_PORT', true);
+  }
+
+  // public getPort() {
+  //   return this.getValue('PORT', true);
+  // }
 
   public isProduction() {
     const mode = this.getValue('MODE', false);
@@ -49,6 +61,7 @@ class ConfigService {
 }
 
 const configService = new ConfigService(process.env).ensureValues([
+  'APP_VERSION',
   'MYSQL_HOST',
   'MYSQL_PORT',
   'MYSQL_USER',
