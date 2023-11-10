@@ -1,4 +1,5 @@
 import { PrimaryGeneratedColumn, BaseEntity, Column, Entity } from 'typeorm';
+import { Exclude } from 'class-transformer';
 
 @Entity()
 export class User extends BaseEntity {
@@ -20,7 +21,9 @@ export class User extends BaseEntity {
   })
   username: string;
 
+  @Exclude({ toPlainOnly: true })
   @Column({
+    select: false,
     name: 'password',
     length: 60,
     nullable: true,

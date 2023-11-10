@@ -13,9 +13,8 @@ async function bootstrap() {
   if (!configService.isProduction()) {
     const config = new DocumentBuilder()
       .setTitle(configService.getAppName())
-      .setDescription('API Application')
+      .setDescription('API application with NestJS get user on mysql database')
       .setVersion(configService.getAppVersion())
-      .addTag('api/v1')
       .build();
 
     const document = SwaggerModule.createDocument(app, config);
