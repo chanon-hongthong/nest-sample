@@ -8,7 +8,7 @@ export class User extends BaseEntity {
   @Column({
     type: 'tinyint',
     nullable: true,
-    default: 1,
+    default: false,
   })
   enabled: number;
 
@@ -32,7 +32,7 @@ export class User extends BaseEntity {
     type: 'varchar',
     length: '45',
     nullable: true,
-    default: 1,
+    default: '',
   })
   first_name: string;
 
@@ -40,22 +40,22 @@ export class User extends BaseEntity {
     type: 'varchar',
     length: '45',
     nullable: true,
-    default: 1,
+    default: '',
   })
   last_name: string;
 
-  // @Column({
-  //   type: 'datetime',
-  //   nullable: true,
-  //   default: 'CURRENT_TIMESTAMP',
-  // })
-  // date_create: string;
+  @Column({
+    type: 'timestamp',
+    nullable: true,
+    default: () => 'CURRENT_TIMESTAMP',
+  })
+  date_create: string;
 
-  // @Column({
-  //   type: 'datetime',
-  //   nullable: true,
-  //   default: '',
-  //   onUpdate: 'CURRENT_TIMESTAMP',
-  // })
-  // date_update: string;
+  @Column({
+    type: 'timestamp',
+    nullable: true,
+    default: null,
+    onUpdate: 'CURRENT_TIMESTAMP',
+  })
+  date_update: string;
 }

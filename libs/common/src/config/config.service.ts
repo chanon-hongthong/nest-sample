@@ -42,7 +42,7 @@ class ConfigService {
       autoLoadEntities: true,
       entities: [join(__dirname, '/**/*.entity{.ts,.js}')],
 
-      synchronize: true,
+      synchronize: false,
       // ssl: this.isProduction(),
     };
   }
